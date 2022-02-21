@@ -32,10 +32,7 @@ const ViewerQuery = gql`
 function SignUp() {
   const router = useRouter();
   const { data, loading, error } = useQuery(ViewerQuery);
-
-  // const viewer = data?.viewer; uncomment this line after you added admin
-  // and remove line below
-  const viewer = "un";
+  const viewer = data?.viewer;
   const [email, setEmail] = useState();
   const [password, setPassword] = useState("password123");
   const [name, setName] = useState();
@@ -97,12 +94,10 @@ function SignUp() {
   useEffect(() => {
     document.querySelector("body").classList.add(styles.body);
   });
-  // set conditions after admin is added to:   if (viewer && viewer.role === "admin")
-  if (viewer === "un")
+  if (viewer && viewer.role === "admin")
     return (
       <Box>
-        {viewer !== "un" && <Header user={viewer}></Header>}
-
+        <Header user={viewer}></Header>
         <Box display="flex" alignItems="center" justifyContent="center" mt="10">
           <Box>
             <Text color="white" fontSize="4xl" textAlign="center" mb="4">
@@ -184,5 +179,5 @@ function SignUp() {
     </Text>
   );
 }
- 
+
 export default SignUp;
