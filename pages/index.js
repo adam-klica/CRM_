@@ -51,6 +51,13 @@ const Index = (props) => {
         <Header user={viewer}></Header>
         <Box m="10">
           <Center>
+            {projects.length == 0 && (
+              <Box>
+                <Text color="white" fontSize="3xl">
+                  No projects yet
+                </Text>
+              </Box>
+            )}
             <Grid templateColumns="repeat(3, 1fr)" gap={6}>
               {projects.map((project) => {
                 if (project.email == viewer.email || viewer.role === "admin")
