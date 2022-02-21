@@ -25,7 +25,7 @@ CREATE TABLE `project` (
 PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 ```
-4) Create new file at directory of project named: 'next.config.js'. 
+4) Edit file at directory of project named: 'next.config.js'. 
 
 ```js
 module.exports = {
@@ -38,8 +38,8 @@ MYSQL_PASSWORD: "password",
 },
 };
 ```
-5) npm start and open: http://localhost:3000/add-user. Add new user, and if everyhing goes well, you should have client in your database.
+5) npm run dev and open: http://localhost:3000/add-user. Add new user, and if everyhing goes well, you should have client in your database and client will receive email to reset password
 
-6) Change role from 'client' to 'admin' in order to have functions to create new users and see their projects
+6) Change role from 'client' to 'admin' in order to have functions to create new users and see their projects(mySQL)
 
-7) Edit add-user.js file to block other users from accesing (uncomment and delete few lines)
+7) Edit add-user.js file to block other users from accesing this page (uncomment and delete few lines )
