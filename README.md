@@ -2,7 +2,7 @@
 
 1. Run "npm install" to install all necessary dependencies
 2. Create database (remember name of database for next.configs.js)
-3. Use this code to create 2 tables in database :
+3. Use this code to create 2 tables in database and add admin in table `users`:
 
 ```sql
 CREATE TABLE `users` (
