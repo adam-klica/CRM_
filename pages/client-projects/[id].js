@@ -190,9 +190,8 @@ const Projects = (props) => {
 
   return (
     <Box>
-      <Header user={viewer}></Header>
-      <Text fontSize="3xl" color="white" textAlign="center" p="4">
-        No projects from {id}.
+      <Text color="white" fontSize="3xl">
+        Something goes wrong!
       </Text>
     </Box>
   );
