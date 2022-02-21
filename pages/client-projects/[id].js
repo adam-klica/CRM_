@@ -27,7 +27,7 @@ const Projects = (props) => {
     document.querySelector("body").classList.add(styles.body);
   });
 
-  if (projects.length !== 0 && viewer && viewer.role === "admin") {
+  if (viewer && viewer.role === "admin") {
     return (
       <Box>
         <Header user={viewer}></Header>
