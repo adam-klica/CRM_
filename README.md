@@ -1,6 +1,6 @@
 # Full-Stack CRM Project
 
-1) npm install to install all necessary dependencies
+1) Run "npm install" to install all necessary dependencies
 2) Create database (remember name of database for next.configs.js)
 3) Use this code to create 2 tables in database :
 
@@ -38,7 +38,7 @@ MYSQL_PASSWORD: "password",
 },
 };
 ```
-5) npm run dev and open: http://localhost:3000/add-user. Add new user, and if everyhing goes well, you should have client in your database and client will receive email to reset password
+5) Run "npm run dev" and open: http://localhost:3000/add-user. Add new user, and if everyhing goes well, you should have client in your database and client will receive email to reset password
 
 6) Change role from 'client' to 'admin' in order to have functions to create new users and see their projects(mySQL)
 
