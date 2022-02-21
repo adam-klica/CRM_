@@ -42,4 +42,4 @@ MYSQL_PASSWORD: "password",
 
 6) Change role from 'client' to 'admin' in order to have functions to create new users and see their projects(mySQL)
 
-7) Edit add-user.js file to block other users from accesing this page (uncomment and delete few lines )
+7) Edit add-user.js file to block clients from accesing this page (uncomment and delete on lines: 36/37 and 100).
