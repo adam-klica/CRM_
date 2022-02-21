@@ -1,0 +1,9 @@
+.gridItem {
+  transition: all 0.4s ease-in-out;
+}
+.gridItem:hover {
+  transform: scale(1.02);
+}
+.body {
+  background-color: #474747;
+}

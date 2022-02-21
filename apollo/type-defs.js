@@ -1,10 +1,12 @@
-import { gql } from '@apollo/client'
+import { gql } from "@apollo/client";
 
 export const typeDefs = gql`
   type User {
     id: ID!
     email: String!
+    role: String!
     createdAt: Int!
+    name: String!
   }
 
   input SignUpInput {
@@ -36,4 +38,4 @@ export const typeDefs = gql`
     signIn(input: SignInInput!): SignInPayload!
     signOut: Boolean!
   }
-`
+`;

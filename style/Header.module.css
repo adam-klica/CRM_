@@ -1,0 +1,8 @@
+.navLink {
+  transition: all 0.2s ease-in;
+}
+
+.navLink:hover {
+  cursor: pointer;
+  opacity: 0.6;
+}
