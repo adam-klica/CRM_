@@ -1,8 +1,8 @@
 # Full-Stack CRM Project
 
-1) Run "npm install" to install all necessary dependencies
-2) Create database (remember name of database for next.configs.js)
-3) Use this code to create 2 tables in database :
+1. Run "npm install" to install all necessary dependencies
+2. Create database (remember name of database for next.configs.js)
+3. Use this code to create 2 tables in database :
 
 ```sql
 CREATE TABLE `users` (
@@ -15,6 +15,8 @@ CREATE TABLE `users` (
    PRIMARY KEY (`id`)
    ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
+   INSERT INTO users (id, name, email, hash, salt, role) VALUES ("ece58541-4720-4a57-a110-96039c519161", "Admin", "admin@gmail.com", "61274e24a966db060358c1041bdd09a9eab4676b13039e9a9eb3e56602e76356b66c84cd4667de48c7e9b32526d1f8ab4ee0ef344c3427a156a8721a34045332", "b6d3b57b2474edf273abac44fd8b1eb3", "admin");
+
 CREATE TABLE `project` (
 `id` varchar(60) NOT NULL,
 `email` varchar(40) NOT NULL,
@@ -25,21 +27,23 @@ CREATE TABLE `project` (
 PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 ```
-4) Edit file at directory of project named: 'next.config.js'. 
+
+4. Edit file at directory of project named: 'next.config.js'.
 
 ```js
 module.exports = {
-env: {
-MYSQL_HOST: "host", // 127.0.0.1 is default
-MYSQL_PORT: "port", // 3306 is default
-MYSQL_DATABASE: "name of database you just created",
-MYSQL_USER: "", // root is default
-MYSQL_PASSWORD: "password",
-},
+  env: {
+    MYSQL_HOST: "host", // 127.0.0.1 is default
+    MYSQL_PORT: "port", // 3306 is default
+    MYSQL_DATABASE: "name of database you just created",
+    MYSQL_USER: "username",
+    MYSQL_PASSWORD: "password",
+  },
 };
 ```
-5) Run "npm run dev" and open: http://localhost:3000/add-user. Add new user, and if everyhing goes well, you should have client in your database and client will receive email to reset password
 
-6) Change role from 'client' to 'admin' in order to have functions to create new users and see their projects(mySQL)
+5. Run "npm run dev" and open: http://localhost:3000/
 
-7) Edit add-user.js file to block clients from accesing this page (uncomment and delete on lines: 36/37 and 100).
+6. Login as :
+   email: admin@gmail.com
+   password: admin
