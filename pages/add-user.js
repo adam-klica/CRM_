@@ -184,5 +184,5 @@ function SignUp() {
     </Text>
   );
 }
-
+ 
 export default SignUp;
