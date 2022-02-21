@@ -9,7 +9,6 @@ export default async (req, res) => {
       query: "SELECT * FROM users WHERE email=?",
       values: [req.body.email],
     });
-
     const message = `
     Hello there,
 
@@ -18,8 +17,8 @@ export default async (req, res) => {
 
     const data = {
       to: req.body.email,
-      from: "adamklica2@gmail.com",
-      subject: "Passwrod Reset",
+      from: "edu.moneey@gmail.com",
+      subject: "Password Reset",
       text: message,
     };
     mail.send(data);
@@ -27,3 +26,4 @@ export default async (req, res) => {
     console.log(err);
   }
 };
+
