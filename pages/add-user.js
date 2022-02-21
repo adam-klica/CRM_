@@ -53,7 +53,7 @@ function SignUp() {
         if (!data.affectedRows) {
           toast.warn("User already exist!", {
             position: "bottom-right",
-            autoClose: 5000,
+            autoClose: 2000,
             hideProgressBar: false,
             closeOnClick: true,
             pauseOnHover: true,
@@ -64,7 +64,7 @@ function SignUp() {
         }
         toast.success("User added!", {
           position: "bottom-right",
-          autoClose: 5000,
+          autoClose: 2000,
           hideProgressBar: false,
           closeOnClick: true,
           pauseOnHover: true,
@@ -82,6 +82,10 @@ function SignUp() {
           .catch((e) => {
             console.log(e);
           });
+
+        setTimeout(function () {
+          router.push("/");
+        }, 2000);
       })
       .catch((e) => {
         console.log(e);
