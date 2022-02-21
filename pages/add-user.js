@@ -97,7 +97,8 @@ function SignUp() {
   if (viewer === "un")
     return (
       <Box>
-        <Header user={viewer}></Header>
+        {viewer !== "un" && <Header user={viewer}></Header>}
+
         <Box display="flex" alignItems="center" justifyContent="center" mt="10">
           <Box>
             <Text color="white" fontSize="4xl" textAlign="center" mb="4">
