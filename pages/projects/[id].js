@@ -115,8 +115,10 @@ const SingleProject = (props) => {
       router.push("/");
     }, 5500);
   };
-
-  if (viewer && project) {
+  if (
+    (viewer && project && viewer.email === project.email) ||
+    (viewer && project && viewer.role === "admin")
+  ) {
     return (
       <Box backgroundColor="gray.100" height="100vh">
         <Header user={viewer}></Header>
